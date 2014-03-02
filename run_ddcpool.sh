@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "open file error ? do : ulimit -n 16384"
+echo "two many open files error ? do : ulimit -n 16384"
 
 SERVICE='python ./run_p2pool.py --net dokdocoin'
 
