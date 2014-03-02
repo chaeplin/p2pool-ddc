@@ -375,7 +375,7 @@
     $(document).on('update_blocks', function(e, eventInfo) {
       $('#recent_blocks').empty();
       $.each(recent_blocks, function(key, block) {
-        ts= block.ts; num= block.number; hash= block.hash;
+        ts= block.ts; num= block.number - 393216; hash= block.hash;
 
         // link to blockchain.info for the given hash
         blockinfo= $('<a/>')

@@ -160,6 +160,26 @@ nets = dict(
         ANNOUNCE_CHANNEL='#cachecoin-bots',
         VERSION_CHECK=lambda v: True,
     ),
+
+    dokdocoin=math.Object(
+        PARENT=networks.nets['dokdocoin'],
+        SHARE_PERIOD=15, # seconds
+        CHAIN_LENGTH=24*60*60//10, # shares
+        REAL_CHAIN_LENGTH=24*60*60//10, # shares
+        TARGET_LOOKBEHIND=200, # shares
+        SPREAD=12, # blocks
+        IDENTIFIER='a06a82c222cab922'.decode('hex'),
+        PREFIX='7c3622a6bcdcf722'.decode('hex'),
+        P2P_PORT=8381,
+        MIN_TARGET=1,
+        MAX_TARGET=2**256//2**20 - 1,
+        PERSIST=False,
+        WORKER_PORT=8382,
+        BOOTSTRAP_ADDRS=''.split(' '),
+        ANNOUNCE_CHANNEL='',
+        VERSION_CHECK=lambda v: True,
+    ),
+
 )
 for net_name, net in nets.iteritems():
     net.NAME = net_name
