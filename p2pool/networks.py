@@ -175,7 +175,7 @@ nets = dict(
         MAX_TARGET=2**256//2**20 - 1,
         PERSIST=False,
         WORKER_PORT=8382,
-        BOOTSTRAP_ADDRS=''.split(' '),
+        BOOTSTRAP_ADDRS='asia01.mine.nu asia02.mine.nu'.split(' '),
         ANNOUNCE_CHANNEL='',
         VERSION_CHECK=lambda v: True,
     ),
