@@ -268,7 +268,7 @@ nets = dict(
         SYMBOL='DDC',
         CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'Dokdocoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/Dokdocoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.dokdocoin'), 'dokdocoin.conf'),
         BLOCK_EXPLORER_URL_PREFIX='http://lab.dokdocoin.org/blockchain/block_explorer.php?block_hash=',
-        #ADDRESS_EXPLORER_URL_PREFIX='',
+        ADDRESS_EXPLORER_URL_PREFIX='',
         TX_EXPLORER_URL_PREFIX='http://lab.dokdocoin.org/blockchain/block_explorer.php?transaction=',
         SANE_TARGET_RANGE=(2**256//1000000000 - 1, 2**256//1000 - 1),
         DUMB_SCRYPT_DIFF=2**16,
